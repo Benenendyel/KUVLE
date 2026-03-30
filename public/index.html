@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KUVLE - Kinda University</title>
+    <link rel="icon" href="./assets/images/webicon.png" />
+    <link rel="stylesheet" href="./styles/output.css" />
+  </head>
+  <body class="min-h-screen">
+    <header class="sticky z-10 top-0 left-0 w-full">
+      <nav class="bg-[#EEF0FF] px-4 py-5 w-full flex flex-row justify-between">
+        <a class="flex items-center" href="/"
+          ><img class="w-8 h-8 mr-2" src="./assets/images/webicon.png" />
+          <span class="text-[#0D47A1] text-2xl font-extrabold">KUVLE</span>
+        </a>
+        <div class="relative flex items-center gap-4">
+          <button
+            id="signInButton"
+            class="text-[#455A64] font-semibold border border-transparent px-5 py-2 rounded-lg cursor-pointer hover:text-[#000000] hover:border-solid hover:border-[#455A64]"
+          >
+            Sign in
+          </button>
+          <button
+            id="signUpButton"
+            class="bg-[#0D47A1] text-[#F8F9FA] font-semibold box-border px-5 py-2 rounded-lg cursor-pointer hover:bg-[#455A64]"
+          >
+            Sign up
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main class="relative w-full flex flex-col items-center">
+      <section
+        class="relative bg-[image:linear-gradient(to_bottom,transparent_50%,rgba(255,255,255,1)_100%),linear-gradient(rgba(255,255,255,0.8),rgba(255,255,255,1)),url('/assets/images/herobg.jpg')] bg-cover bg-center bg-no-repeat w-full h-[700px] border-box px-10 flex flex-col justify-center items-center md:bg-[image:none] md:bg-[#0D47A1]"
+      >
+        <div class="w-full flex flex-col items-center overflow-hidden">
+          <span class="hidden px-2 py-2 md:flex"
+            >Introducing the the KUVLE</span
+          >
+          <span class="flex text-[#0D47A1] font-semibold uppercase md:hidden"
+            >Kinda University</span
+          >
+          <h1
+            class="text-[#0D47A1] text-4xl font-bold text-center tracking-wide mt-3 md:text-left md:text-5xl md:text-[#F8F9FA]"
+          >
+            Kinda Curating Knowledge for the Modern Scholar.
+          </h1>
+          <p
+            class="flex text-[#000000] text-center tracking-wide mt-3 md:hidden"
+          >
+            Deep-dive into meticulously crafted curricula designed to elevate
+            your intellectual pursuit.
+          </p>
+          <p
+            class="hidden text-[#F8F9FA] text-center tracking-wider mt-3 md:flex"
+          >
+            Experience a Virtual Learning Environment designed as a sactuary.
+            Move beyond cluttered classrooms into a curated space for
+            high-impact intellectual growth.
+          </p>
+        </div>
+        <div class="w-full flex flex-col gap-3 mt-10 md:flex-row">
+          <!-- BUTTONS FOR DESKTOP -->
+          <button
+            class="hidden bg-[#85F6E5] font-semibold flex-row items-center px-4 py-3 rounded-xl cursor-pointer md:flex"
+          >
+            <p class="font-semibold">View the Experience</p>
+            <img class="w-5 h-5 ml-3" src="./assets/images/go-arrow-icon.png" />
+          </button>
+
+          <!-- BUTTONS FOR MOBIlE -->
+          <button
+            class="bg-[#0D47A1] text-[#F8F9FA] font-semibold box-border px-5 py-4 rounded-xl cursor-pointer hover:bg-[#455A64] md:hidden"
+          >
+            Start Learning
+          </button>
+          <button
+            class="w-full flex flex-row justify-center items-center border-box px-5 py-4 rounded-xl border border-transparent cursor-pointer hover:border-solid hover:border-[#0D47A1] md:hidden"
+          >
+            <img
+              class="w-5 h-5 mr-3"
+              src="./assets/images/go-button-lightMode.png"
+            />
+            <p class="text-[#0D47A1] font-semibold">View the Experience</p>
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <script src="./js/auth.js"></script>
+  </body>
+</html>
