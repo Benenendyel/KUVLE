@@ -1,12 +1,17 @@
+const router = require("./src/routes/router.js");
+
 const express = require("express");
 const app = express();
-const PORT = 3000;
 
 app.use(express.static("public"));
-
-const router = require("./src/routes/router.js");
 app.use(router);
 
+// This catches file path error
+app.use((req, res, next) => {
+  res.status(404).send("Not Found!");
+});
+
+const PORT = 3000;
 app.listen(PORT, () => {
-  console.log("System running on port", PORT);
+  console.log("Server is listening on port:", PORT);
 });
