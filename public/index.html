@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html class="overflow-x-hidden" lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -32,59 +32,143 @@
     </header>
 
     <main class="relative w-full flex flex-col items-center">
+      <!-- HERO SECTION -->
       <section
-        class="relative bg-[image:linear-gradient(to_bottom,transparent_50%,rgba(255,255,255,1)_100%),linear-gradient(rgba(255,255,255,0.8),rgba(255,255,255,1)),url('/assets/images/herobg.jpg')] bg-cover bg-center bg-no-repeat w-full h-[700px] border-box px-10 flex flex-col justify-center items-center md:bg-[image:none] md:bg-[#0D47A1]"
+        class="relative bg-[image:linear-gradient(to_bottom,transparent_50%,rgba(255,255,255,1)_100%),linear-gradient(rgba(255,255,255,0.8),rgba(255,255,255,1)),url('/assets/images/herobg.jpg')] bg-cover bg-center bg-no-repeat w-full h-[100vh] md:h-fit border-box px-10 py-10 flex justify-between items-center overflow-hidden md:bg-[image:none] md:bg-[#0D47A1]"
       >
-        <div class="w-full flex flex-col items-center overflow-hidden">
-          <span class="hidden px-2 py-2 md:flex"
-            >Introducing the the KUVLE</span
-          >
-          <span class="flex text-[#0D47A1] font-semibold uppercase md:hidden"
-            >Kinda University</span
-          >
-          <h1
-            class="text-[#0D47A1] text-4xl font-bold text-center tracking-wide mt-3 md:text-left md:text-5xl md:text-[#F8F9FA]"
-          >
-            Kinda Curating Knowledge for the Modern Scholar.
-          </h1>
-          <p
-            class="flex text-[#000000] text-center tracking-wide mt-3 md:hidden"
-          >
-            Deep-dive into meticulously crafted curricula designed to elevate
-            your intellectual pursuit.
-          </p>
-          <p
-            class="hidden text-[#F8F9FA] text-center tracking-wider mt-3 md:flex"
-          >
-            Experience a Virtual Learning Environment designed as a sactuary.
-            Move beyond cluttered classrooms into a curated space for
-            high-impact intellectual growth.
-          </p>
-        </div>
-        <div class="w-full flex flex-col gap-3 mt-10 md:flex-row">
-          <!-- BUTTONS FOR DESKTOP -->
-          <button
-            class="hidden bg-[#85F6E5] font-semibold flex-row items-center px-4 py-3 rounded-xl cursor-pointer md:flex"
-          >
-            <p class="font-semibold">View the Experience</p>
-            <img class="w-5 h-5 ml-3" src="./assets/images/go-arrow-icon.png" />
-          </button>
+        <!-- THIS IS JUST THE FADING BACKGROUND FOR THE DESKTOP DISPLAY -->
+        <img
+          class="hidden w-full absolute inset-0 z-0 opacity-10 object-cover md:block"
+          src="./assets/images/herobg.jpg"
+        />
 
-          <!-- BUTTONS FOR MOBIlE -->
-          <button
-            class="bg-[#0D47A1] text-[#F8F9FA] font-semibold box-border px-5 py-4 rounded-xl cursor-pointer hover:bg-[#455A64] md:hidden"
+        <div
+          class="z-2 w-full flex flex-col justify-center items-center md:w-[40%] overflow-visible"
+        >
+          <div
+            class="w-full flex flex-col items-center overflow-hidden md:items-start"
           >
-            Start Learning
-          </button>
-          <button
-            class="w-full flex flex-row justify-center items-center border-box px-5 py-4 rounded-xl border border-transparent cursor-pointer hover:border-solid hover:border-[#0D47A1] md:hidden"
-          >
-            <img
-              class="w-5 h-5 mr-3"
-              src="./assets/images/go-button-lightMode.png"
-            />
-            <p class="text-[#0D47A1] font-semibold">View the Experience</p>
-          </button>
+            <span class="hidden px-2 py-2 md:flex"
+              >Introducing the the KUVLE</span
+            >
+            <span class="flex text-[#0D47A1] font-semibold uppercase md:hidden"
+              >Kinda University</span
+            >
+            <h1
+              class="text-[#0D47A1] text-4xl font-bold text-center tracking-wide mt-3 md:text-left md:text-5xl md:text-[#F8F9FA]"
+            >
+              Kinda Curating Knowledge for the Modern Scholar.
+            </h1>
+            <p
+              class="flex text-[#000000] text-center tracking-wide mt-3 md:hidden"
+            >
+              Deep-dive into meticulously crafted curricula designed to elevate
+              your intellectual pursuit.
+            </p>
+            <p
+              class="hidden text-[#F8F9FA] text-left tracking-wider mt-3 md:flex"
+            >
+              Experience a Virtual Learning Environment designed as a sactuary.
+              Move beyond cluttered classrooms into a curated space for
+              high-impact intellectual growth.
+            </p>
+          </div>
+          <div class="w-full flex flex-col gap-3 mt-10 md:flex-row">
+            <!-- BUTTONS FOR DESKTOP -->
+            <button
+              class="hidden bg-[#85F6E5] font-semibold flex-row items-center px-4 py-3 rounded-xl cursor-pointer md:flex"
+            >
+              <p class="font-semibold">View the Experience</p>
+              <img
+                class="w-5 h-5 ml-3"
+                src="./assets/images/go-arrow-icon.png"
+              />
+            </button>
+            <button
+              class="hidden bg-transparent text-[#FFFFFF] font-semibold px-4 py-3 border border-[#FFFFFF] rounded-xl cursor-pointer md:flex"
+            >
+              View Curriculum
+            </button>
+
+            <!-- BUTTONS FOR MOBIlE -->
+            <button
+              class="bg-[#0D47A1] text-[#F8F9FA] font-semibold box-border px-5 py-4 rounded-xl cursor-pointer hover:bg-[#455A64] md:hidden"
+            >
+              Start Learning
+            </button>
+            <button
+              class="w-full flex flex-row justify-center items-center border-box px-5 py-4 rounded-xl border border-transparent cursor-pointer hover:border-solid hover:border-[#0D47A1] md:hidden"
+            >
+              <img
+                class="w-5 h-5 mr-3"
+                src="./assets/images/go-button-lightMode.png"
+              />
+              <p class="text-[#0D47A1] font-semibold">View the Experience</p>
+            </button>
+          </div>
+        </div>
+        <img
+          class="hidden w-[40%] z-2 rounded-lg object-cover md:block"
+          src="./assets/images/imageforhero.jpg"
+        />
+      </section>
+
+      <!-- VISION PROPOSITION SECTION -->
+      <section class="flex flex-col justify-center items-center px-10 py-10">
+        <h1
+          class="relative text-[#0D47A1] text-xl font-bold after:content-[''] after:absolute after:bottom-0 after:w-[20%] after:h-[5px] after:left-1/2 after:-translate-x-1/2 after:bg-[#85F6E5] pb-3 md:text-3xl"
+        >
+          Precision-Engineered Learning
+        </h1>
+        <div class="flex flex-col gap-10 md:flex-row mt-10">
+          <div class="flex flex-row">
+            <div
+              class="bg-[#D9E2FF] w-fit h-fit inline-block rounded-2xl box-order px-3 py-3 shrink-0 mr-5"
+            >
+              <img class="w-8 h-8" src="./assets/images/open-book.png" />
+            </div>
+            <div>
+              <span class="text-[#0D47A1] text-lg font-semibold"
+                >Curated Rigor</span
+              >
+              <p class="mt-1">
+                Every module is peer-reviewed and structured for maximum
+                cognitive retention, moving beyond surface-level tutorials.
+              </p>
+            </div>
+          </div>
+          <div class="flex flex-row">
+            <div
+              class="bg-[#85F6E5] w-fit h-fit inline-block rounded-2xl box-order px-3 py-3 shrink-0 mr-5"
+            >
+              <img class="w-8 h-8" src="./assets/images/comprehension.png" />
+            </div>
+            <div>
+              <span class="text-[#0D47A1] text-lg font-semibold"
+                >Expert Insights</span
+              >
+              <p class="mt-1">
+                Learn directly from domain masters through exclusive lectures
+                and annotated study guides found nowhere else.
+              </p>
+            </div>
+          </div>
+          <div class="flex flex-row">
+            <div
+              class="bg-[#D9E2FF] w-fit h-fit inline-block rounded-2xl box-order px-3 py-3 shrink-0 mr-5"
+            >
+              <img class="w-8 h-8" src="./assets/images/open-book.png" />
+            </div>
+            <div>
+              <span class="text-[#0D47A1] text-lg font-semibold"
+                >The Scholar's Canvas</span
+              >
+              <p class="mt-1">
+                Our interface is a quiet study vault, designed with editorial
+                asymmetry to eliminate digital clutter and noise.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
     </main>
