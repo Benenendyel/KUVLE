@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="overflow-x-hidden" lang="en">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./styles/output.css" />
   </head>
   <body class="min-h-screen">
+    <!-- NAVBAR -->
     <header class="sticky z-10 top-0 left-0 w-full">
       <nav class="bg-[#EEF0FF] px-4 py-5 w-full flex flex-row justify-between">
         <a class="flex items-center" href="/"
@@ -67,7 +68,7 @@
               your intellectual pursuit.
             </p>
             <p
-              class="hidden text-[#F8F9FA] text-left tracking-wider mt-3 md:flex"
+              class="hidden text-[#E1E3E4] text-left tracking-wider mt-3 md:flex"
             >
               Experience a Virtual Learning Environment designed as a sactuary.
               Move beyond cluttered classrooms into a curated space for
@@ -77,7 +78,7 @@
           <div class="w-full flex flex-col gap-3 mt-10 md:flex-row">
             <!-- BUTTONS FOR DESKTOP -->
             <button
-              class="hidden bg-[#85F6E5] font-semibold flex-row items-center px-4 py-3 rounded-xl cursor-pointer md:flex"
+              class="hidden bg-[#85F6E5] font-semibold flex-row items-center px-4 py-3 rounded-xl cursor-pointer md:flex hover:scale-105"
             >
               <p class="font-semibold">View the Experience</p>
               <img
@@ -86,7 +87,7 @@
               />
             </button>
             <button
-              class="hidden bg-transparent text-[#FFFFFF] font-semibold px-4 py-3 border border-[#FFFFFF] rounded-xl cursor-pointer md:flex"
+              class="hidden bg-transparent text-[#FFFFFF] font-semibold px-4 py-3 border border-[#FFFFFF] rounded-xl cursor-pointer md:flex hover:bg-[#FFFFFF] hover:text-[#0D47A1]"
             >
               View Curriculum
             </button>
@@ -164,7 +165,7 @@
             <div
               class="bg-[#D9E2FF] w-fit h-fit inline-block rounded-2xl box-order px-3 py-3 shrink-0 mr-5"
             >
-              <img class="w-8 h-8" src="./assets/images/open-book.png" />
+              <img class="w-8 h-8" src="./assets/images/brush.png" />
             </div>
             <div class="md:mt-5">
               <span class="text-[#0D47A1] text-lg font-semibold"
@@ -178,8 +179,38 @@
           </div>
         </div>
       </section>
+
+      <!-- CRT -->
+      <section
+        class="w-full flex flex-col justify-center items-center bg-[#0D47A1] md:rounded-xl px-10 py-10 md:w-[95%]"
+      >
+        <div class="flex flex-col justify-center items-center gap-5">
+          <h1
+            class="text-center text-2xl text-[#FFFFFF] font-semibold md:text-4xl"
+          >
+            Ready to Advance Your Academic Pursuit?
+          </h1>
+          <p class="text-center text-[#E1E3E4]">
+            Join a community of scholars dedicated to deep learning and
+            intellectual rigor.
+          </p>
+        </div>
+        <button
+          class="w-full bg-[#FFFFFF] text-[#0D47A1] font-semibold mt-10 px-4 py-3 rounded-xl cursor-pointer md:w-fit hover:bg-[#455A64] hover:text-[#FFFFFF]"
+        >
+          Get Started Now
+        </button>
+      </section>
     </main>
 
-    <script src="./js/auth.js"></script>
+    <!-- FOOTER -->
+    <footer
+      class="w-full bg-[#EEF0FF] flex justify-center items-center py-5 md:py-10 md:mt-10"
+    >
+      <p class="text-center text-[#5C5F60] text-sm md:text-base">
+        © 2026 Kinda University. All Right Reserved.
+      </p>
+    </footer>
+    <script src="./js/main.js"></script>
   </body>
 </html>

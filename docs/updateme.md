@@ -13,12 +13,19 @@ just in case laziness takes over.
 
 ## Accomplishments:
 
+## Landing page
+
 1. Landing page navbar (day 1)
 2. Hero Section for mobile display (day 1)
 3. Hero Section for desktop display (day 1)
 4. Value Proposition Section for mobile display (day 1)
 5. Value Proposition Section for desktop display (day 1)
+6. Done.
+
+## Dashboard
+
+1. Wala pa
 
 ## Doing:
 
-1.
+1. Practicing database (json)
