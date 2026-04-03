@@ -29,3 +29,4 @@ just in case laziness takes over.
 ## Doing:
 
 1. Practicing database (json)
+2. Authentication (after the 1st one)

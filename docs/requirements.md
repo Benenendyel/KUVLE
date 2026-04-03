@@ -19,13 +19,15 @@ of skills (if I ever have one).
 
 There are three types of users in the system:
 
-## Role | Role
+## User Roles
 
-## Student | Can view lessons, submit assignments, take quizzes
+There are three types of users in the system:
 
-## Teacher | Add lessons, create assignments, and quizzes, grade students
-
-## Admin | Assign teachers courses, remove user's perm
+| Role    | Capabilities                                                |
+| ------- | ----------------------------------------------------------- |
+| Student | View lessons, submit assignments, take quizzes              |
+| Teacher | Add lessons, create assignments and quizzes, grade students |
+| Admin   | Assign teachers to courses, remove user permissions         |
 
 ---
 
