@@ -7,7 +7,7 @@
     <link rel="icon" href="./assets/images/webicon.png" />
     <link rel="stylesheet" href="./styles/output.css" />
   </head>
-  <body class="min-h-screen">
+  <body class="relative min-h-screen">
     <!-- NAVBAR -->
     <header class="sticky z-10 top-0 left-0 w-full">
       <nav class="bg-[#EEF0FF] px-4 py-5 w-full flex flex-row justify-between">
@@ -211,6 +211,196 @@
         © 2026 Kinda University. All Right Reserved.
       </p>
     </footer>
-    <script src="./js/main.js"></script>
+
+    <!-- AUTH MODALS -->
+    <div
+      id="authModal"
+      class="hidden fixed left-0 bottom-0 top-0 z-999 bg-black/30 backdrop-blur-sm w-full h-screen"
+    >
+      <div
+        id="authForms"
+        class="bg-[#FFFFFF] flex flex-col fixed bottom-0 left-0 gap-5 w-full h-fit px-5 py-5 rounded-tl-2xl rounded-tr-2xl"
+      >
+        <!-- CLOSE BUTTON -->
+        <div class="flex justify-end select-none">
+          <button
+            id="closeAuthButton"
+            class="bg-[#F0F1F2] px-2 py-2 rounded-lg cursor-pointer hover:bg-[#E1E3E4]"
+          >
+            <img class="w-5 h-5" src="./assets/images/minus.png" />
+          </button>
+        </div>
+
+        <!-- FORMS -->
+        <div id="loginForm" class="hidden"></div>
+        <div id="registerForm" class="hidden flex-col gap-5 w-full h-full">
+          <!-- TEXTS -->
+          <div>
+            <h1
+              class="text-[#0D47A1] text-3xl font-semibold tracking-tight text-center mb-2"
+            >
+              Step into the University
+            </h1>
+            <p class="text-[#5C5F60] text-center">
+              Curate your intellectual journey with precision.
+            </p>
+          </div>
+
+          <!-- INPUTS -->
+          <div class="flex flex-col gap-3">
+            <div class="flex flex-row gap-3">
+              <!-- FIRSTNAME -->
+              <div class="flex flex-col-reverse">
+                <div
+                  class="bg-[#E1E3E4] flex flex-row items-center px-5 py-2 rounded-lg"
+                >
+                  <img class="w-3 h-3 mr-3" src="./assets/images/user.png" />
+                  <input
+                    class="w-full outline-none"
+                    id="firstNameInput"
+                    type="text"
+                    placeholder="eg. Joshua"
+                  />
+                </div>
+                <label
+                  class="uppercase text-[#5C5F60] text-sm font-semibold"
+                  for="firstNameInput"
+                  >First Name</label
+                >
+              </div>
+
+              <!-- LASTNAME -->
+              <div class="flex flex-col-reverse">
+                <div
+                  class="bg-[#E1E3E4] flex flex-row items-center px-5 py-2 rounded-lg"
+                >
+                  <img class="w-3 h-3 mr-3" src="./assets/images/user.png" />
+                  <input
+                    class="w-full outline-none"
+                    id="firstNameInput"
+                    type="text"
+                    placeholder="eg. Santillan"
+                  />
+                </div>
+                <label
+                  class="uppercase text-[#5C5F60] text-sm font-semibold"
+                  for="lastNameInput"
+                  >Last Name</label
+                >
+              </div>
+            </div>
+
+            <!-- EMAIL -->
+            <div class="flex flex-col-reverse">
+              <div
+                class="bg-[#E1E3E4] flex flex-row items-center px-5 py-2 rounded-lg"
+              >
+                <img class="w-3 h-3 mr-3" src="./assets/images/email.png" />
+                <input
+                  class="w-full outline-none"
+                  id="emailInputRegister"
+                  type="email"
+                  placeholder="eg. Joshua.12@email.com"
+                />
+              </div>
+              <label
+                class="uppercase text-[#5C5F60] text-sm font-semibold"
+                for="emailInput"
+                >Email Address</label
+              >
+            </div>
+
+            <!-- PASSWORD -->
+            <div class="flex flex-col-reverse">
+              <div
+                class="bg-[#E1E3E4] flex flex-row items-center px-5 py-2 rounded-lg"
+              >
+                <img class="w-3 h-3 mr-3" src="./assets/images/padlock.png" />
+                <input
+                  class="w-full outline-none"
+                  id="passwordInputRegister"
+                  type="password"
+                  placeholder="eg. Joshua.12@email.com"
+                />
+                <button
+                  id="showPasswordButton"
+                  class="pl-3 font-semibold cursor-pointer"
+                >
+                  Show
+                </button>
+              </div>
+              <label
+                class="uppercase text-[#5C5F60] text-sm font-semibold"
+                for="emailInput"
+                >Password</label
+              >
+            </div>
+
+            <!-- DROPDOWN USERTYPE -->
+            <div class="relative flex flex-col-reverse">
+              <div
+                class="relative bg-[#E1E3E4] flex flex-row items-center px-5 py-2 rounded-lg"
+              >
+                <img class="w-5 h-5 mr-3" src="./assets/images/id-card.png" />
+
+                <!-- DROPDOWN BUTTON -->
+                <div
+                  class="w-full flex flex-row items-center cursor-pointer select-none"
+                >
+                  <input
+                    id="userTypeInput"
+                    class="w-full outline-none cursor-pointer user-select caret-transparent"
+                    type="text"
+                    placeholder="Select your role"
+                    readonly
+                  />
+                  <img
+                    class="w-5 h-5"
+                    src="./assets/images/dropdown-arrow.png"
+                  />
+                </div>
+
+                <!-- DROPDWON LIST -->
+                <div
+                  class="hidden absolute top-full w-full bg-[#FFFFFF] px-5 py-3 rounded-lg"
+                >
+                  <ul class="flex flex-col gap-1">
+                    <li onclick="userType('')" class="cursor-pointer">
+                      Select a user
+                    </li>
+                    <li onclick="userType('Student')" class="cursor-pointer">
+                      Student
+                    </li>
+                    <li onclick="userType('Teacher')" class="cursor-pointer">
+                      Teacher
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <label
+                class="uppercase text-[#5C5F60] text-sm font-semibold"
+                for="userTypeInput"
+                >User Type</label
+              >
+            </div>
+
+            <!-- BUTTONS -->
+            <div class="w-full mt-10">
+              <button
+                class="w-full py-3 bg-[#0D47A1] text-[#FFFFFF] font-semibold rounded-lg cursor-pointer hover:bg-[#455A64]"
+              >
+                Register Account
+              </button>
+              <div class="flex flex-row">
+                <p>Already a member?</p>
+                <button>Sign in</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/landingpage.js"></script>
   </body>
 </html>

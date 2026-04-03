@@ -35,7 +35,7 @@ There are three types of users in the system:
 
 ### Authentication
 
-1. The user can register with a name, email, and password.
+1. The user can register with a name, email, password, and choose what type of user they are.
 2. The system must send the user their credentials.
 3. The user must be able to verify their account.
 4. Users can log in and log out.
@@ -49,10 +49,11 @@ There are three types of users in the system:
 
 ### Assignments & Submissions
 
-1. Teachers can create assignments with whatever title they put, add description, and set due date
-2. Teachers can view all the submissions for an assignment.
-3. Students can submit their assignments (text or file upload).
-4. Teachers can insult their students on a submission.
+1. Teachers can create their own course.
+2. Teachers can create assignments with whatever title they put, add description, and set due date
+3. Teachers can view all the submissions for an assignment.
+4. Students can submit their assignments (text or file upload).
+5. Teachers can insult their students on a submission.
 
 ### Quiezzs
 
@@ -64,4 +65,4 @@ There are three types of users in the system:
 
 1. Can insult both teachers and students
 2. Abuse their power or simply dominate any type of users
-3. Kind
+3. Kindness

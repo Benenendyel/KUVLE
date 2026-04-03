@@ -5,7 +5,7 @@ const path = require("path");
 
 // this part is for pages
 router.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "../../public/index.html"));
+  res.sendFile(path.join(__dirname, "../../public/views/index.html"));
 });
 
 // this part is for the db

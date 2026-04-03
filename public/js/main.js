@@ -12,3 +12,16 @@ fetch("/users", {
   .then((res) => res.json())
   .then((data) => console.log(data));
 */
+
+fetch("/users", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+  },
+  body: JSON.stringify({
+    username: "Elisha",
+    pasword: "Ovrielle",
+  }),
+})
+  .then((res) => res.json())
+  .then((data) => console.log(data));

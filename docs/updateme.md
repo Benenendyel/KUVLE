@@ -20,7 +20,7 @@ just in case laziness takes over.
 3. Hero Section for desktop display (day 1)
 4. Value Proposition Section for mobile display (day 1)
 5. Value Proposition Section for desktop display (day 1)
-6. Done.
+6. Added auth modals (registration) (day 3)
 
 ## Dashboard
 
@@ -30,3 +30,5 @@ just in case laziness takes over.
 
 1. Practicing database (json)
 2. Authentication (after the 1st one)
+3. Adding auth login modal
+4. Fixing registration modal
