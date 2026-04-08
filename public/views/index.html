@@ -219,7 +219,7 @@
     >
       <div
         id="authForms"
-        class="bg-[#FFFFFF] flex flex-col fixed bottom-0 left-0 gap-5 w-full h-fit px-5 py-5 rounded-tl-2xl rounded-tr-2xl"
+        class="bg-[#FFFFFF] flex flex-col fixed bottom-0 left-0 gap-5 w-full h-fit px-5 py-5 rounded-tl-2xl rounded-tr-2xl md:w-[40%] md:left-1/2 md:bottom-1/2 md:-translate-x-1/2 md:translate-y-1/2 md:rounded-2xl"
       >
         <!-- CLOSE BUTTON -->
         <div class="flex justify-end select-none">
@@ -232,8 +232,83 @@
         </div>
 
         <!-- FORMS -->
-        <div id="loginForm" class="hidden"></div>
-        <div id="registerForm" class="hidden flex-col gap-5 w-full h-full">
+        <!-- LOGIN FORM -->
+        <div id="loginForm" class="hidden">
+          <!-- TEXTS -->
+          <div>
+            <h1
+              class="text-[#0D47A1] text-3xl font-semibold tracking-tight text-center mb-2"
+            >
+              Connect to your account
+            </h1>
+            <p class="text-[#5C5F60] text-center">Scholar Canvas Portal</p>
+          </div>
+
+          <div class="flex flex-col gap-3 mt-5">
+            <!-- EMAIL -->
+            <div class="flex flex-col-reverse md:flex-1">
+              <div
+                class="bg-[#E1E3E4] flex flex-row items-center px-5 py-2 rounded-lg"
+              >
+                <img class="w-3 h-3 mr-3" src="./assets/images/user.png" />
+                <input
+                  class="w-full outline-none"
+                  id="emailInput"
+                  type="text"
+                  placeholder="eg. Joshua@example.com"
+                  autocomplete="off"
+                />
+              </div>
+              <label
+                class="uppercase text-[#5C5F60] text-sm font-semibold"
+                for="emailInput"
+                >Email</label
+              >
+            </div>
+
+            <!-- PASSWORD -->
+            <div class="flex flex-col-reverse md:flex-1">
+              <div
+                class="bg-[#E1E3E4] flex flex-row items-center px-5 py-2 rounded-lg"
+              >
+                <img class="w-3 h-3 mr-3" src="./assets/images/user.png" />
+                <input
+                  class="w-full outline-none"
+                  id="passwordInput"
+                  type="text"
+                  placeholder="eg. Joshua@example.com"
+                  autocomplete="off"
+                />
+              </div>
+              <label
+                class="uppercase text-[#5C5F60] text-sm font-semibold"
+                for="passwordInput"
+                >Password</label
+              >
+            </div>
+          </div>
+
+          <!-- BUTTONS -->
+          <div class="flex flex-col w-full mt-5 pb-15 md:pb-0">
+            <button
+              class="w-full py-3 bg-[#0D47A1] text-[#FFFFFF] font-semibold rounded-lg cursor-pointer hover:bg-[#455A64]"
+            >
+              Login
+            </button>
+            <div class="flex flex-row items-center justify-center mt-5">
+              <p>Don't have an account yet?</p>
+              <button
+                id="switchToSignup"
+                class="underline text-[#0D47A1] font-semibold cursor-pointer"
+              >
+                Create account
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- REGISTER FORM -->
+        <div id="registerForm" class="hidden flex-col gap-5 w-full">
           <!-- TEXTS -->
           <div>
             <h1
@@ -247,10 +322,10 @@
           </div>
 
           <!-- INPUTS -->
-          <div class="flex flex-col gap-3">
+          <div class="flex flex-col gap-3 mt-5">
             <div class="flex flex-row gap-3">
               <!-- FIRSTNAME -->
-              <div class="flex flex-col-reverse">
+              <div class="flex flex-col-reverse md:flex-1">
                 <div
                   class="bg-[#E1E3E4] flex flex-row items-center px-5 py-2 rounded-lg"
                 >
@@ -260,6 +335,7 @@
                     id="firstNameInput"
                     type="text"
                     placeholder="eg. Joshua"
+                    autocomplete="off"
                   />
                 </div>
                 <label
@@ -270,16 +346,17 @@
               </div>
 
               <!-- LASTNAME -->
-              <div class="flex flex-col-reverse">
+              <div class="flex flex-col-reverse md:flex-1">
                 <div
                   class="bg-[#E1E3E4] flex flex-row items-center px-5 py-2 rounded-lg"
                 >
                   <img class="w-3 h-3 mr-3" src="./assets/images/user.png" />
                   <input
                     class="w-full outline-none"
-                    id="firstNameInput"
+                    id="lastNameInput"
                     type="text"
                     placeholder="eg. Santillan"
+                    autocomplete="off"
                   />
                 </div>
                 <label
@@ -301,6 +378,7 @@
                   id="emailInputRegister"
                   type="email"
                   placeholder="eg. Joshua.12@email.com"
+                  autocomplete="off"
                 />
               </div>
               <label
@@ -321,6 +399,7 @@
                   id="passwordInputRegister"
                   type="password"
                   placeholder="eg. Joshua.12@email.com"
+                  autocomplete="off"
                 />
                 <button
                   id="showPasswordButton"
@@ -339,6 +418,7 @@
             <!-- DROPDOWN USERTYPE -->
             <div class="relative flex flex-col-reverse">
               <div
+                id="dropdownButton"
                 class="relative bg-[#E1E3E4] flex flex-row items-center px-5 py-2 rounded-lg"
               >
                 <img class="w-5 h-5 mr-3" src="./assets/images/id-card.png" />
@@ -352,6 +432,7 @@
                     class="w-full outline-none cursor-pointer user-select caret-transparent"
                     type="text"
                     placeholder="Select your role"
+                    autocomplete="off"
                     readonly
                   />
                   <img
@@ -362,16 +443,26 @@
 
                 <!-- DROPDWON LIST -->
                 <div
-                  class="hidden absolute top-full w-full bg-[#FFFFFF] px-5 py-3 rounded-lg"
+                  id="dropdownList"
+                  class="hidden absolute w-[95%] bg-[#FFFFFF] border-black border rounded-lg"
                 >
                   <ul class="flex flex-col gap-1">
-                    <li onclick="userType('')" class="cursor-pointer">
+                    <li
+                      onclick="userType('')"
+                      class="cursor-pointer px-5 py-3 hover:bg-[#e1e3e4]"
+                    >
                       Select a user
                     </li>
-                    <li onclick="userType('Student')" class="cursor-pointer">
+                    <li
+                      onclick="userType('Student')"
+                      class="cursor-pointer px-5 py-3 hover:bg-[#e1e3e4]"
+                    >
                       Student
                     </li>
-                    <li onclick="userType('Teacher')" class="cursor-pointer">
+                    <li
+                      onclick="userType('Teacher')"
+                      class="cursor-pointer px-5 py-3 hover:bg-[#e1e3e4]"
+                    >
                       Teacher
                     </li>
                   </ul>
@@ -383,22 +474,23 @@
                 >User Type</label
               >
             </div>
+          </div>
 
-            <!-- BUTTONS -->
-            <div class="w-full mt-2">
+          <!-- BUTTONS -->
+          <div class="flex flex-col w-full mt-5 pb-15 md:pb-0">
+            <button
+              class="w-full py-3 bg-[#0D47A1] text-[#FFFFFF] font-semibold rounded-lg cursor-pointer hover:bg-[#455A64]"
+            >
+              Register Account
+            </button>
+            <div class="flex flex-row items-center justify-center mt-5">
+              <p>Already a member?</p>
               <button
-                class="w-full py-3 bg-[#0D47A1] text-[#FFFFFF] font-semibold rounded-lg cursor-pointer hover:bg-[#455A64]"
+                id="switchToSignin"
+                class="underline text-[#0D47A1] font-semibold cursor-pointer"
               >
-                Register Account
+                Sign in
               </button>
-              <div class="flex flex-row items-center justify-center mt-5">
-                <p>Already a member?</p>
-                <button
-                  class="underline text-[#0D47A1] font-semibold cursor-pointer"
-                >
-                  Sign in
-                </button>
-              </div>
             </div>
           </div>
         </div>
