@@ -1,8 +1,10 @@
 [
   {
-    "id": 1,
-    "username": "Venangel",
-    "password": "123456"
+    "firstname": "asd",
+    "lastname": "asd",
+    "email": "asdfasdf@gmail.com",
+    "password": "$2b$10$LC3Jma0MlV.ULjQ8i4pr8.2XjiCHndDEhkv/lZyHvREzNvDhi29ji",
+    "usertype": "Teacher"
   }
 ]
 

@@ -97,3 +97,44 @@ function userType(text) {
 
   userTypeInput.value = text;
 }
+
+// This part handles the login and registration
+
+const registerButton = document.querySelector("#registerButton");
+
+const authentications = {
+  login: () => {},
+
+  register: () => {
+    const firstname = document.querySelector("#firstNameInput").value.trim();
+    const lastname = document.querySelector("#lastNameInput").value.trim();
+    const email = document.querySelector("#emailInputRegister").value.trim();
+    const password = document
+      .querySelector("#passwordInputRegister")
+      .value.trim();
+    const usertype = document.querySelector("#userTypeInput").value.trim();
+
+    if (firstname && lastname && email && password && usertype) {
+      fetch("/registration", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          firstname,
+          lastname,
+          email,
+          password,
+          usertype,
+        }),
+      })
+        .then((message) => message.json())
+        .then((message) => console.log(message))
+        .catch((error) => console.error(error));
+    } else {
+      window.alert("All input fields must be filled.");
+    }
+  },
+};
+
+registerButton.addEventListener("click", authentications.register);

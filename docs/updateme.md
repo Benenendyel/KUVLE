@@ -22,6 +22,7 @@ just in case laziness takes over.
 5. Value Proposition Section for desktop display (day 1)
 6. Added auth modals (registration) (day 3)
 7. Added functionality for the custom dropdown list (day 5)
+8. Added registration functionality and hashing of the passwords
 
 ## Dashboard
 
@@ -31,4 +32,4 @@ just in case laziness takes over.
 
 1. Practicing database (json)
 2. Authentication (after the 1st one)
-3. Adding functionalitis on register and login buttons
+3. Login buttons
