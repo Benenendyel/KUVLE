@@ -1,17 +1,4 @@
-/* commenting this out to stop it from occuring whenever i open index.html while the server is running
-fetch("/users", {
-  method: "POST",
-  headers: {
-    "Content-Type": "application/json",
-  },
-  body: JSON.stringify({
-    username: "testuser123",
-    password: "venangel",
-  }),
-})
-  .then((res) => res.json())
-  .then((data) => console.log(data));
-*/
+const getStartedBtn = document.querySelector("#getStartedButton");
 
 const signinBtn = document.querySelector("#signInButton");
 const signupBtn = document.querySelector("#signUpButton");
@@ -28,18 +15,10 @@ const body = document.querySelector("body");
 const html = document.querySelector("html");
 
 const authModalFunction = {
-  loginModalOpen() {
+  openModal() {
     body.classList.add("overflow-hidden");
     html.classList.add("overflow-hidden");
     authModal.classList.remove("hidden");
-    loginForm.classList.remove("hidden");
-  },
-
-  registerModalOpen() {
-    body.classList.add("overflow-hidden");
-    html.classList.add("overflow-hidden");
-    authModal.classList.remove("hidden");
-    registerForm.classList.remove("hidden");
   },
 
   closeAuthModal() {
@@ -48,6 +27,16 @@ const authModalFunction = {
     authModal.classList.add("hidden");
     registerForm.classList.add("hidden");
     loginForm.classList.add("hidden");
+  },
+
+  loginModalOpen() {
+    this.openModal();
+    loginForm.classList.remove("hidden");
+  },
+
+  registerModalOpen() {
+    this.openModal();
+    registerForm.classList.remove("hidden");
   },
 
   switchSignIn() {
@@ -61,14 +50,40 @@ const authModalFunction = {
   },
 };
 
+// for handling the show password text
+const showPasswordText = (button, input) => {
+  const showButton = document.querySelector(button);
+  const showInput = document.querySelector(input);
+
+  showButton.addEventListener("click", () => {
+    showInput.type = showInput.type === "password" ? "text" : "password";
+    showButton.textContent = showInput.type === "password" ? "Show" : "Hide";
+  });
+};
+
+showPasswordText("#showPasswordButtonLogin", "#passwordInputLogin");
+showPasswordText("#showPasswordButtonRegister", "#passwordInputRegister");
+
 // switch form buttons
-switchToSigninButton.addEventListener("click", authModalFunction.switchSignIn);
-switchToSignupButton.addEventListener("click", authModalFunction.switchSignup);
+switchToSigninButton.addEventListener("click", () =>
+  authModalFunction.switchSignIn(),
+);
+switchToSignupButton.addEventListener("click", () =>
+  authModalFunction.switchSignup(),
+);
 
 // modal buttons
-signinBtn.addEventListener("click", authModalFunction.loginModalOpen);
-signupBtn.addEventListener("click", authModalFunction.registerModalOpen);
-closeAuthBtn.addEventListener("click", authModalFunction.closeAuthModal);
+getStartedBtn.addEventListener("click", () =>
+  authModalFunction.registerModalOpen(),
+);
+
+signinBtn.addEventListener("click", () => authModalFunction.loginModalOpen());
+signupBtn.addEventListener("click", () =>
+  authModalFunction.registerModalOpen(),
+);
+closeAuthBtn.addEventListener("click", () =>
+  authModalFunction.closeAuthModal(),
+);
 
 // this section is just for the handling of the dropdown list
 const dropdownButton = document.querySelector("#dropdownButton");
@@ -99,11 +114,38 @@ function userType(text) {
 }
 
 // This part handles the login and registration
-
 const registerButton = document.querySelector("#registerButton");
+const loginButton = document.querySelector("#loginButton");
 
 const authentications = {
-  login: () => {},
+  login: () => {
+    const email = document.querySelector("#emailInputLogin").value.trim();
+    const password = document.querySelector("#passwordInputLogin").value.trim();
+
+    fetch("/login", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        email,
+        password,
+      }),
+    })
+      .then((data) => data.json())
+      .then((data) => {
+        if (data.success) {
+          authModalFunction.closeAuthModal();
+          document.querySelector("#emailInputLogin").value = "";
+          document.querySelector("#passwordInputLogin").value = "";
+
+          window.alert(data.message);
+        } else {
+          window.alert(data.message);
+        }
+      })
+      .catch((error) => console.error(error));
+  },
 
   register: () => {
     const firstname = document.querySelector("#firstNameInput").value.trim();
@@ -137,4 +179,5 @@ const authentications = {
   },
 };
 
+loginButton.addEventListener("click", authentications.login);
 registerButton.addEventListener("click", authentications.register);

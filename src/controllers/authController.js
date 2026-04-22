@@ -11,7 +11,34 @@ const validateEmail = (email) => {
 };
 
 const authController = {
-  login: (email, password) => {},
+  login: async (req, res) => {
+    if (req.body.email && req.body.password) {
+      const emailExists = validateEmail(req.body.email);
+
+      if (emailExists) {
+        const passwordMatch = await bcrypt.compare(
+          req.body.password,
+          emailExists.password,
+        );
+
+        if (passwordMatch) {
+          res.status(200).json({ message: "Succesful login!", success: true });
+        } else {
+          res
+            .status(401)
+            .json({ message: "Password is wrong!", success: false });
+        }
+      } else {
+        res
+          .status(404)
+          .json({ message: "Email doesn't exist!", success: false });
+      }
+    } else {
+      res
+        .status(400)
+        .json({ message: "Do not leave an empty input!", success: false });
+    }
+  },
 
   register: async (req, res) => {
     const emailExists = validateEmail(req.body.email);

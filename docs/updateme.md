@@ -32,4 +32,5 @@ just in case laziness takes over.
 
 1. Practicing database (json)
 2. Authentication (after the 1st one)
-3. Login buttons
+3. Add some functionalities more kinda like a real landing page of a website
+4. Finish the remember me file

@@ -5,6 +5,19 @@
     "email": "asdfasdf@gmail.com",
     "password": "$2b$10$LC3Jma0MlV.ULjQ8i4pr8.2XjiCHndDEhkv/lZyHvREzNvDhi29ji",
     "usertype": "Teacher"
+  },
+  {
+    "firstname": "Ven Angel",
+    "lastname": "Tagaro",
+    "email": "Venangel.tagaro@gmail.com",
+    "password": "$2b$10$HcTLH9stbzqBH8dL78KZAeXqKXUl.Bjv3p5IcEZyOfA1LTFS6bmZu",
+    "usertype": "Student"
+  },
+  {
+    "firstname": "Ven Angel",
+    "lastname": "Tagaro",
+    "email": "Vencarlostagaro@gmail.com",
+    "password": "$2b$10$uVSboAMkoYRPv1eOosAzfOLyRqumPkZndl1hNG/DB24ytcbgCoIhq",
+    "usertype": "Student"
   }
 ]
-

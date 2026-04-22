@@ -196,6 +196,7 @@
           </p>
         </div>
         <button
+          id="getStartedButton"
           class="w-full bg-[#FFFFFF] text-[#0D47A1] font-semibold mt-10 px-4 py-3 rounded-xl cursor-pointer md:w-fit hover:bg-[#455A64] hover:text-[#FFFFFF]"
         >
           Get Started Now
@@ -253,9 +254,9 @@
                 <img class="w-3 h-3 mr-3" src="./assets/images/user.png" />
                 <input
                   class="w-full outline-none"
-                  id="emailInput"
+                  id="emailInputLogin"
                   type="text"
-                  placeholder="Your Email"
+                  placeholder="eg. Joshua@gmail.com"
                   autocomplete="off"
                 />
               </div>
@@ -274,11 +275,17 @@
                 <img class="w-3 h-3 mr-3" src="./assets/images/user.png" />
                 <input
                   class="w-full outline-none"
-                  id="passwordInput"
+                  id="passwordInputLogin"
                   type="password"
-                  placeholder="Your Password"
+                  placeholder="eg. 123456"
                   autocomplete="off"
                 />
+                <button
+                  id="showPasswordButtonLogin"
+                  class="pl-3 font-semibold cursor-pointer"
+                >
+                  Show
+                </button>
               </div>
               <label
                 class="uppercase text-[#5C5F60] text-sm font-semibold"
@@ -288,9 +295,15 @@
             </div>
           </div>
 
+          <div class="mt-2">
+            <input id="rememberMeCheckbox" type="checkbox" />
+            <label for="rememberMeCheckbox">Remember Me</label>
+          </div>
+
           <!-- BUTTONS -->
-          <div class="flex flex-col w-full mt-5 pb-15 md:pb-0">
+          <div class="flex flex-col w-full mt-2 pb-15 md:pb-0">
             <button
+              id="loginButton"
               class="w-full py-3 bg-[#0D47A1] text-[#FFFFFF] font-semibold rounded-lg cursor-pointer hover:bg-[#455A64]"
             >
               Login
@@ -402,7 +415,7 @@
                   autocomplete="off"
                 />
                 <button
-                  id="showPasswordButton"
+                  id="showPasswordButtonRegister"
                   class="pl-3 font-semibold cursor-pointer"
                 >
                   Show
