@@ -58,9 +58,11 @@ const authController = {
         JSON.stringify(users, null, 2),
       );
 
-      res.status(201).json({ message: "Account Created!" });
+      res.status(201).json({ message: "Account Created!", success: true });
     } else {
-      res.status(409).json({ message: "Email already exists!" });
+      res
+        .status(409)
+        .json({ message: "Email already exists!", success: false });
     }
   },
 };

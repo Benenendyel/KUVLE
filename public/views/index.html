@@ -94,6 +94,7 @@
 
             <!-- BUTTONS FOR MOBIlE -->
             <button
+              id="startLearningButton"
               class="bg-[#0D47A1] text-[#F8F9FA] font-semibold box-border px-5 py-4 rounded-xl cursor-pointer hover:bg-[#455A64] md:hidden"
             >
               Start Learning
@@ -295,16 +296,18 @@
             </div>
           </div>
 
-          <div class="mt-2">
+          <div
+            class="mt-5 text-sm text-[#5C5F60] font-semibold flex flex-row gap-3"
+          >
             <input id="rememberMeCheckbox" type="checkbox" />
             <label for="rememberMeCheckbox">Remember Me</label>
           </div>
 
           <!-- BUTTONS -->
-          <div class="flex flex-col w-full mt-2 pb-15 md:pb-0">
+          <div class="flex flex-col w-full mt-5 pb-15 md:pb-0">
             <button
               id="loginButton"
-              class="w-full py-3 bg-[#0D47A1] text-[#FFFFFF] font-semibold rounded-lg cursor-pointer hover:bg-[#455A64]"
+              class="w-full py-3 select-none bg-[#E1E3E4] text-[#FFFFFF] font-semibold rounded-lg cursor-pointer"
             >
               Login
             </button>
@@ -312,7 +315,7 @@
               <p>Don't have an account yet?</p>
               <button
                 id="switchToSignup"
-                class="underline text-[#0D47A1] font-semibold cursor-pointer"
+                class="underline text-[#0D47A1] font-semibold cursor-pointer ml-1"
               >
                 Create account
               </button>
@@ -489,11 +492,23 @@
             </div>
           </div>
 
+          <div
+            class="mt-5 select-none text-sm text-[#5C5F60] font-semibold flex flex-row gap-3"
+          >
+            <input id="acceptPolicyCheckbox" type="checkbox" />
+            <label for="acceptPolicyCheckbox"
+              >I agree to the
+              <a class="text-[#0D47A1]" href="#">Terms of Service</a> and
+              <a class="text-[#0D47A1]" href="#">Privacy Policy</a> concerning
+              academic data usage.</label
+            >
+          </div>
+
           <!-- BUTTONS -->
           <div class="flex flex-col w-full mt-5 pb-15 md:pb-0">
             <button
               id="registerButton"
-              class="w-full py-3 bg-[#0D47A1] text-[#FFFFFF] font-semibold rounded-lg cursor-pointer hover:bg-[#455A64]"
+              class="w-full py-3 select-none bg-[#E1E3E4] text-[#FFFFFF] font-semibold rounded-lg"
             >
               Register Account
             </button>
@@ -501,7 +516,7 @@
               <p>Already a member?</p>
               <button
                 id="switchToSignin"
-                class="underline text-[#0D47A1] font-semibold cursor-pointer"
+                class="underline text-[#0D47A1] font-semibold cursor-pointer ml-1"
               >
                 Sign in
               </button>
@@ -510,7 +525,6 @@
         </div>
       </div>
     </div>
-
     <script src="./js/landingpage.js"></script>
   </body>
 </html>

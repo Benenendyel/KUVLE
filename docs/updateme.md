@@ -23,6 +23,7 @@ just in case laziness takes over.
 6. Added auth modals (registration) (day 3)
 7. Added functionality for the custom dropdown list (day 5)
 8. Added registration functionality and hashing of the passwords
+9. Added checkboxes "TOS" and "Remember Me"
 
 ## Dashboard
 
@@ -33,4 +34,4 @@ just in case laziness takes over.
 1. Practicing database (json)
 2. Authentication (after the 1st one)
 3. Add some functionalities more kinda like a real landing page of a website
-4. Finish the remember me file
+4. Add a modal for succesful and unsuccessful login/registration
